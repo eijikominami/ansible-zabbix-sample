@@ -1,0 +1,11 @@
+# /zabbix_sample/roles/sh/defaults
+
+alert:
+  sh: /usr/local/bin/alertsender.sh
+  disaster_msg: "致命的な障害"
+  high_msg: "重度の障害"
+  average_msg: "軽度の障害"
+  warning_msg: "警告"
+  information_msg: "情報"
+  clear_msg: "クリア"
+  default_msg: "情報"

@@ -1,0 +1,17 @@
+- name: "configure and deploy a zabbix server"
+  hosts: all
+  connection: local
+  pre_tasks:
+    - set_fact: ansible_architecture="aarch64"
+      when: ansible_architecture == "armv7l"
+  vars_files:
+    - ../common_playbook/vars/common.yml
+  roles:
+    - ../common_playbook/roles/setup
+    - sh
+    - ../common_playbook/roles/mariadb-for-zabbix
+    - ../common_playbook/roles/httpd-for-zabbix
+    - ../common_playbook/roles/zabbix
+    - ../common_playbook/roles/snmptt
+    - ../common_playbook/roles/fping
+    - snmp

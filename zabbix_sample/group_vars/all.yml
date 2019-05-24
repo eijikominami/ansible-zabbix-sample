@@ -1,0 +1,9 @@
+zabbix:
+  start_snmptrapper: 1
+  start_pollers: 20
+  start_db_syncers: 8
+  cache_size: 128M
+version:
+  mariadb: 10.2
+  zabbix: 4.0.5
+  fping: 4.2

@@ -1,0 +1,38 @@
+#!/bin/sh
+
+SLACK_NAME=
+SLACK_CHANNEK=
+EMOJI_NAME=
+ENDPOINT_URL=
+
+case "$1" in
+  "Disaster")
+        TEXT="{{ alert.disaster_msg }}"
+        COLOR="danger" ;;                  # 赤ライン
+  "High")
+        TEXT="{{ alert.high_msg }}"
+        COLOR="danger" ;;                  # 赤ライン　
+  "Average")
+        TEXT="{{ alert.average_msg }}"
+        COLOR="danger" ;;                  # 赤ライン
+  "Warning")
+        TEXT="{{ alert.warning_msg }}"
+        COLOR="warning" ;;                 # 黄ライン
+  "Information")
+        TEXT="{{ alert.information_msg }}"
+        COLOR="good" ;;                    # 緑ライン
+  "Clear")
+        TEXT="{{ alert.clear_msg }}"
+        COLOR="good" ;;                    # 緑ライン
+  * )
+        TEXT="{{ alert.default_msg }}"
+        COLOR="good" ;;                    # 緑ライン
+esac
+
+# Slack送信
+
+echo send to SLACK...
+# 変数を使うときは''を終了する
+CURL_CONTENT=`echo 'payload={"channel": "'$SLACK_CHANNEL'", "username": "'$SLACK_NAME'", "text": "['$TEXT'] '$2'", "icon_emoji": "'$EMOJI_NAME'", "attachments": [{"color": "'$COLOR'", "fields": [{"title": "'$1'", "value": "'$3'"}]}]}'`
+CURL="curl -X POST --data-urlencode `echo "'${CURL_CONTENT}'"` $ENDPOINT_URL"
+eval $CURL

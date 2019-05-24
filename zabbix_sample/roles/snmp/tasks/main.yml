@@ -1,0 +1,4 @@
+# /zabbix_sample/roles/snmp/tasks
+
+- name: "create {{ snmp.vendormibs }} directory"
+  file: path="{{ snmp.vendormibs }}" state=directory owner=root group=root mode=0755

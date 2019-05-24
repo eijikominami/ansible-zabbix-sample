@@ -1,0 +1,4 @@
+# /zabbix_sample/roles/snmp/defaults
+
+snmp:
+  vendormibs: "/usr/share/snmp/vendormibs"

@@ -6,10 +6,17 @@ Ansibleを用いてローカルホストに**Zabbixサーバ**を構築します
 
 構築方法は以下の通り。
 
++ gitをインストールする
+
+```bash
+yum install -y git
+```
+
+
 + プロジェクトをダウンロードする
 
 ```bash
-git clone https://github.com/eijikominami/ansible-zabbix-sample.git
+git clone --recursive https://github.com/eijikominami/ansible-zabbix-sample.git
 ```
 
 + `Epel`リポジトリを追加する
@@ -18,6 +25,18 @@ git clone https://github.com/eijikominami/ansible-zabbix-sample.git
   
 ```bash
 sudo amazon-linux-extras install -y epel
+```
+
++ ansibleをインストールする
+
+```bash
+yum install -y ansible
+```
+
++ ディレクトリを移動する
+
+```bash
+cd ansible-zabbix-sample/zabbix_sample
 ```
 
 + Ansibleプレイブックを実行する

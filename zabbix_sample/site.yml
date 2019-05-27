@@ -1,5 +1,5 @@
 - name: "configure and deploy a zabbix server"
-  hosts: all
+  hosts: 127.0.0.1
   connection: local
   pre_tasks:
     - set_fact: ansible_architecture="aarch64"

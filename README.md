@@ -1,6 +1,6 @@
 # 概要
-社内勉強会 fukushima.dev#9 Zabbixサーバハンズオン資料。
-Ansibleを用いてローカルホストに**Zabbixサーバ**を構築します。
++ 社内勉強会 fukushima.dev#9 Zabbixサーバハンズオン資料。
++ Ansibleを用いてローカルホストに**Zabbixサーバ**を構築します。
 
 ## Deployment
 

@@ -9,14 +9,14 @@
 + gitをインストールする
 
 ```bash
-yum install -y git
+sudo yum install -y git
 ```
 
 
 + プロジェクトをダウンロードする
 
 ```bash
-git clone --recursive https://github.com/eijikominami/ansible-zabbix-sample.git
+sudo git clone --recursive https://github.com/eijikominami/ansible-zabbix-sample.git
 ```
 
 + `Epel`リポジトリを追加する
@@ -30,7 +30,7 @@ sudo amazon-linux-extras install -y epel
 + ansibleをインストールする
 
 ```bash
-yum install -y ansible
+sudo yum install -y ansible
 ```
 
 + ディレクトリを移動する

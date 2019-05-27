@@ -47,3 +47,9 @@ sudo ansible-playbook site.yml
 
 + ブラウザから`http://IP_ADDRESS/zabbix`にアクセスして初期設定を行う
 + OSを再起動する
++ ログイン
+
+| 項目 | 内容 |
+| --- | --- |
+| ログイン | Admin | 
+| パスワード | zabbix | 
